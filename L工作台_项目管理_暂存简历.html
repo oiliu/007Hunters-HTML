@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<title></title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta content="width=1200, initial-scale=1, maximum-scale=1, user-scalable=1" name="viewport">
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" href="font/iconfont.css">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script  type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.boxy.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+</head>
+
+<body>
+<div class="header headerStyle">
+	<div class="area clearfix">
+		<h1 class="logo"><img src="images/slogo.png"></h1>
+		<div class="nav">
+			<a href="" title="首页">首页</a><span class="bor">|</span><a href="" title="名企热招">名企热招</a><span class="bor">|</span><a href="" title="名企热招">金牌猎手</a><span class="bor">|</span><a href="" title="关于我们">关于我们</a>
+		</div>
+		
+		<div class="right_box ">
+			<div class="userInfo clearfix">
+				<div class="img"><img src="images/index/hunter.jpg"></div><!--/img-->
+				<div class="txt">
+					<p class="fl"><a href="" class="blue">Mark.s</a> 欢迎你回来 </p>
+					<div class="fr">
+						<a href="" class="msgBtn">站内信 <i>8</i></a>
+						<a href="" class="outBtn">退出</a>
+					</div>
+				</div><!--/txt-->
+				
+			</div>
+		</div>
+		
+		<dl class="ewm">
+			<dt>二维码 <span class="iconfont">&#xe606;</span></dt>
+			<dd>
+				<img src="images/ewm.png" width="80" height="80"/>
+			</dd>
+		</dl>
+		
+	</div>
+</div>
+
+<div class="subNav">
+	<div class="area">
+		<a href="L建立人才库.html">建立人才库</a><a href="L我要做单.html">我要做单</a><a href="L工作台_项目管理.html" class="active">项目管理</a><a href="L简历管理.html">简历管理</a><a href="L客户管理.html">客户管理</a><a href="L统计报表.html">统计报表</a><a href="L账户管理.html">账户管理</a>
+	</div>
+</div>
+
+
+
+<div class="content area clearfix">
+	
+	
+		<h2 class="fs18 fb">快速搜索</h2>
+	
+		<div class="s_box mt20">
+			<div class="top bor_b">
+				<table border="0" cellspacing="0" cellpadding="0" class="tableTdP5">
+					
+					<tr>
+						<td class="gray-9" align="right" width="60">关键词</td>
+						<td>
+							
+							<div class="pr sus_box">
+								<input type="text" class="inp-bor sus_inp" name="keywords" id="keywords" onfocus="showSusList('#keywordsList')" onkeypress="ajaxSusList('#keywordsList')"/>
+								
+								<ul class="box sus_list" id="keywordsList">
+									<li>关键词</li>
+									<li>关键词</li>
+									<li>关键词</li>
+									<li>关键词</li>
+									<li>关键词</li>
+								</ul>
+								
+							</div>
+							
+						</td>
+						<td class="gray-9" align="right" width="60">职位ID</td>
+						<td><input type="text" class="inp-bor sus_inp" name=""/></td>
+						<td>
+							<a href="javascript:;" class="moreGrayBtn" id="showCenBox">更多搜索条件  <span class="iconfont">&#xe609;</span></a>
+						</td>
+						
+					</tr>
+				</table>
+			</div><!--/top-->
+			
+			
+			<div class="cen" id="cen_box">
+				<table border="0" cellspacing="0" cellpadding="0" class="gray-9 tableTdP5">
+					
+					<tr>
+						<td width="60" align="right">职位名称</td>
+						<td><input type="text" class="inp-bor"></td>
+						<td width="60" align="right">所属部门</td>
+						<td colspan="2"><input type="text" class="inp-bor inp-right"></td>
+					</tr>
+					<tr>
+						<td align="right">职位类别</td>
+						<td><input type="text" class="inp-bor"></td>
+						<td align="right">职位级别</td>
+						<td colspan="2"><input type="text" class="inp-bor"></td>
+					</tr>
+					<tr>
+						<td align="right">所在城市</td>
+						<td colspan="4"><input type="text" class="inp-bor inp-right"></td>
+						
+					</tr>
+					<tr>
+						<td align="right">发布日期</td>
+						<td><input type="text" class="inp-bor inp-right" id="d4311" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'d4312\')}'})"></td>
+						<td align="right">截止日期</td>
+						<td><input type="text" class="inp-bor inp-right" id="d4312" onclick="WdatePicker({minDate:'#F{$dp.$D(\'d4311\')}'})"></td>
+						<td><a href="javascript:;" class="moreGrayBtn" id="hideCenBox"> 收起  <span class="iconfont">&#xe608;</span></a></td>
+						
+					</tr>
+					
+					
+				</table>	
+				
+			</div><!--/cen-->
+			<div class="tc mt20"><a href="javascript:;" class="baseBtn btn-lar" id="btns_1">搜 索</a> <a href="javascript:;" class="baseBtn baseBtnGray btn-lar">保存搜索条件</a></div>
+		</div><!--/s_box-->
+	
+	
+	
+		<div class="mt50">
+			
+			
+			<h2 class="fs18 mb10 fb">暂存简历</h2>
+			
+			<table border="0" cellspacing="0" cellpadding="0" class="tableTdP2 mb10 fs14">
+			
+				<tr>
+					<td class="blue" align="right">项目启动日期： </td>
+					<td class="gray-9" width="150">2015.10.25   </td>
+					<td class="blue" align="right">所在城市：</td>
+					<td class="gray-9" colspan="3"> 北京</td>
+				</tr>
+				<tr>
+					<td class="blue" align="right">职位ID：</td>
+					<td class="gray-9">632555866</td>
+					<td class="blue" align="right">企业名称： </td>
+					<td class="gray-9" width="260"> 北京链家房地产经纪有限公司   </td>
+					<td class="blue" align="right">职位名称：</td>
+					<td class="gray-9">网页设计师</td>
+				</tr>
+			</table>
+			                 
+			                                                                                
+			
+			
+			
+			<table border="0" cellspacing="0" cellpadding="0" width="100%" class="baseTable">
+				<tr>
+				  <th>暂存时间	 </th>              
+				  <th>人选姓名   </th>           	
+				  <th>性别	</th>           
+				  <th>年龄        	</th> 
+				  <th>工作年限	 </th>       
+				  <th>学历证书	 </th>                                 
+				  <th>任职公司    </th>                                         	
+				  <th>职位名称	</th>                                  
+				  <th>所在城市	</th>           
+ 				  <th>我要推荐	</th>          
+ 				  <th>上传时间</th> 
+				</tr>
+
+
+				<tr>
+					<td>2015.1.5</td>
+					<td>张三丰</td>
+					<td>男</td>
+					<td>15</td>
+					<td>11</td>
+					<td>大学本科</td>
+					<td>中国石化总公司</td>
+					<td>UI设计师</td>
+					<td>深圳</td>
+					<td><a href="" class="blue">推荐</a></td>
+					<td>2015.1.5</td>
+				</tr>
+				<tr class="bg">
+					<td>2015.1.5</td>
+					<td>张三丰</td>
+					<td>男</td>
+					<td>15</td>
+					<td>11</td>
+					<td>大学本科</td>
+					<td>中国石化总公司</td>
+					<td>UI设计师</td>
+					<td>深圳</td>
+					<td><a href="" class="blue">推荐</a></td>
+					<td>2015.1.5</td>
+				</tr>
+				<tr>
+					
+					<td>2015.1.5</td>
+					<td>张三丰</td>
+					<td>男</td>
+					<td>15</td>
+					<td>11</td>
+					<td>大学本科</td>
+					<td>中国石化总公司</td>
+					<td>UI设计师</td>
+					<td>深圳</td>
+					<td><a href="" class="blue">推荐</a></td>
+					<td>2015.1.5</td>
+					
+				</tr>
+				<tr class="bg">
+					<td>2015.1.5</td>
+					<td>张三丰</td>
+					<td>男</td>
+					<td>15</td>
+					<td>11</td>
+					<td>大学本科</td>
+					<td>中国石化总公司</td>
+					<td>UI设计师</td>
+					<td>深圳</td>
+					<td><a href="" class="blue">推荐</a></td>
+					<td>2015.1.5</td>
+				</tr>
+				<tr>
+					
+					<td>2015.1.5</td>
+					<td>张三丰</td>
+					<td>男</td>
+					<td>15</td>
+					<td>11</td>
+					<td>大学本科</td>
+					<td>中国石化总公司</td>
+					<td>UI设计师</td>
+					<td>深圳</td>
+					<td><a href="" class="blue">推荐</a></td>
+					<td>2015.1.5</td>
+					
+				</tr>
+				<tr class="bg">
+					<td>2015.1.5</td>
+					<td>张三丰</td>
+					<td>男</td>
+					<td>15</td>
+					<td>11</td>
+					<td>大学本科</td>
+					<td>中国石化总公司</td>
+					<td>UI设计师</td>
+					<td>深圳</td>
+					<td><a href="" class="blue">推荐</a></td>
+					<td>2015.1.5</td>
+				</tr>
+				<tr>
+					
+					<td>2015.1.5</td>
+					<td>张三丰</td>
+					<td>男</td>
+					<td>15</td>
+					<td>11</td>
+					<td>大学本科</td>
+					<td>中国石化总公司</td>
+					<td>UI设计师</td>
+					<td>深圳</td>
+					<td><a href="" class="blue">推荐</a></td>
+					<td>2015.1.5</td>
+					
+				</tr>
+				<tr class="bg">
+					<td>2015.1.5</td>
+					<td>张三丰</td>
+					<td>男</td>
+					<td>15</td>
+					<td>11</td>
+					<td>大学本科</td>
+					<td>中国石化总公司</td>
+					<td>UI设计师</td>
+					<td>深圳</td>
+					<td><a href="" class="blue">推荐</a></td>
+					<td>2015.1.5</td>
+				</tr>
+				<tr>
+					
+					<td>2015.1.5</td>
+					<td>张三丰</td>
+					<td>男</td>
+					<td>15</td>
+					<td>11</td>
+					<td>大学本科</td>
+					<td>中国石化总公司</td>
+					<td>UI设计师</td>
+					<td>深圳</td>
+					<td><a href="" class="blue">推荐</a></td>
+					<td>2015.1.5</td>
+					
+				</tr>
+				<tr class="bg">
+					<td>2015.1.5</td>
+					<td>张三丰</td>
+					<td>男</td>
+					<td>15</td>
+					<td>11</td>
+					<td>大学本科</td>
+					<td>中国石化总公司</td>
+					<td>UI设计师</td>
+					<td>深圳</td>
+					<td><a href="" class="blue">推荐</a></td>
+					<td>2015.1.5</td>
+				</tr>
+			</table>
+			<div class="page">
+				<a href="">首页</a>
+				<a href="">上一页</a>
+				<a href="" class="active">1</a>
+				<a href="">2</a>
+				<a href="">3</a>
+				<a href="">4</a>
+				<a href="">5</a>
+				<a href="">6</a>
+				<a href="">7</a>
+				<a href="">8</a>
+				<a href="">下一页</a>
+				<a href="">末页</a>
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				跳转 <input type="text" class="inp"> 页 <input type="button" value="确定" class="btn" />
+			</div>
+			
+				
+		</div><!--/mt50-->
+		
+	
+	
+		
+		
+		
+	
+	
+		
+		
+
+</div><!--/content-->
+
+
+
+
+
+
+
+
+<div class="footer footerStyle">
+	<div class="area clearfix">
+		<p class="fl">京ICP备09083200号 京ICP证070419号 人才服务许可证:RC0710280    </p>
+		<p class="fr">Copyright©2000-2015 liepin.com All Rights Reserved</p>
+	</div>
+	
+</div><!--/footer-->
+
+
+</body>
+</html>
+

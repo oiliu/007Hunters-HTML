@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<title></title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta content="width=1200, initial-scale=1, maximum-scale=1, user-scalable=1" name="viewport">
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" href="font/iconfont.css">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script  type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.boxy.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+</head>
+
+<body>
+<div class="header">
+	<div class="area clearfix">
+		<h1 class="logo"><img src="images/slogo.png"></h1>
+		<div class="nav">
+			<a href="" title="首页">首页</a><span class="bor">|</span><a href="" title="名企热招">名企热招</a><span class="bor">|</span><a href="" title="名企热招">金牌猎手</a><span class="bor">|</span><a href="" title="关于我们">关于我们</a>
+		</div>
+		
+		<div class="right_box ">
+			<div class="userInfo clearfix">
+				<div class="img"><img src="images/index/hunter.jpg"></div><!--/img-->
+				<div class="txt">
+					<p class="fl"><a href="" class="blue">Mark.s</a> 欢迎你回来 </p>
+					<div class="fr">
+						<a href="" class="msgBtn">站内信 <i>8</i></a>
+						<a href="" class="outBtn">退出</a>
+					</div>
+				</div><!--/txt-->
+				
+			</div>
+		</div>
+		
+		<dl class="ewm">
+			<dt>二维码 <span class="iconfont">&#xe606;</span></dt>
+			<dd>
+				<img src="images/ewm.png" width="80" height="80"/>
+			</dd>
+		</dl>
+		
+	</div>
+</div>
+
+
+
+
+
+<div class="content area clearfix">
+	
+	<div class=" mb20">
+		<h2 class="fs25 mb10">创建企业名片</h2>
+	</div>
+	
+
+	<div class="mb30 fs14">
+		<table border="0" cellspacing="0" cellpadding="0" class="tableTdP2 mb10" width="100%">
+			<tr>
+				<td width="90" align="right"><span class="red">*</span>企业名称</td>
+				<td width="200"><input type="text" class="inp-bor"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td align="right"><span class="red">*</span>企业性质</td>
+				<td >
+					
+					<dl class="dl_select_big dl_select dl_select_w">
+						<dt><span class="txt">--请选择--</span> <span class="iconfont">&#xe60b;</span></dt>
+						<dd>
+							<a href="javascript:;" data-value="000">不限</a>
+                            <a href="javascript:;" data-value="010">外商独资/外企办事处</a>
+                            <a href="javascript:;" data-value="020">中外合营(合资/合作)</a>
+                            <a href="javascript:;" data-value="030">私营/民营企业</a>
+                            <a href="javascript:;" data-value="040">国有企业</a>
+                            <a href="javascript:;" data-value="050">国内上市公司</a>
+                            <a href="javascript:;" data-value="060">政府机关／非盈利机构</a>
+                            <a href="javascript:;" data-value="070">事业单位</a>
+                            <a href="javascript:;" data-value="999">其他</a>
+						</dd>
+					</dl>
+					<input type="hidden" value="" />
+				
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td align="right"><span class="red">*</span>企业规模</td>
+				<td>
+					<dl class="dl_select_big dl_select dl_select_w">
+						<dt><span class="txt">--请选择--</span> <span class="iconfont">&#xe60b;</span></dt>
+						<dd>
+							<a href="javascript:;">少于50人</a>
+							<a href="javascript:;">50-150人</a>
+							<a href="javascript:;">150-500人</a>
+							<a href="javascript:;">500-1000人</a>
+							<a href="javascript:;">1000-5000人</a>
+							<a href="javascript:;">5000-10000人</a>
+							<a href="javascript:;">10000人以上</a>
+							
+						</dd>
+					</dl>
+					<input type="hidden" value="" />
+				</td>
+				
+				<td></td>
+			</tr>
+			<tr>
+				<td align="right"><span class="red">*</span>所在城市</td>
+				<td colspan="2"><input type="text" class="inp-bor inp-right ellipsis" id="cityInp"></td>
+			</tr>
+			<tr>
+				<td valign="top" align="right"><span class="red">*</span>企业介绍</td>
+				<td colspan="2">
+					
+					<textarea name="" rows="" cols="" class="inp-bor textarea500" placeholder="为了吸引更多企业和求职自荐者关注，请认真填写猎手个人宣传，如成功案例等。	"></textarea>
+					
+				</td>
+			</tr>
+			<tr>
+				<td align="right" height="45"><span class="red">*</span>企业亮点</td>
+				<td colspan="2" valign="top">
+					
+					<span id="tags">
+						<input type="text" class="inp-bor w70 mr5" name="tags_1"><input type="text" class="inp-bor w70 mr5" name="tags_2"><input type="text" class="inp-bor w70 mr5" name="tags_3"><input type="text" class="inp-bor w70 mr5"  name="tags_4"><input type="text" class="inp-bor w70 mr5" name="tags_5"><input type="text" class="inp-bor w70 mr5" name="tags_6">
+					</span>
+					
+					<span class="iconfont jiaIconfont" onclick="addTags(this,'tags')" data-num='6'>&#xe60a;</span>
+				
+				</td>
+			</tr>
+			<tr>
+				<td align="right">其他说明</td>
+				<td colspan="2">
+					<textarea name="" rows="" cols="" class="inp-bor textarea500"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">企业logo</td>
+				<td colspan="2">
+					<div class="fileBox">
+						<input type="text" class="inp-bor">
+						<span class="btn">浏览</span>
+						<input type="file" name="" id="" value="" class="file"/>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">企业宣传图片</td>
+				<td colspan="2">
+					<div class="fileBox">
+						<input type="text" class="inp-bor">
+						<span class="btn">浏览</span>
+						<input type="file" name="" id="" value="" class="file"/>
+					</div>
+					
+				</td>
+			</tr>
+			
+		</table>
+		
+		
+		
+		
+	</div>
+	
+	<br />
+	<div class=" mb20 ">
+		<h2 class="fs25 mb10">招聘达人真实信息</h2>
+	</div>
+	<div class=" mb30 fs14">
+		
+	
+	<table border="0" cellspacing="0" cellpadding="0" class="tableTdP2 mb10">
+			<tr>
+				<td width="80" align="right"><span class="red">*</span>姓名</td>
+				<td width="200"><input type="text" class="inp-bor w300"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td align="right" height="40"><span class="red">*</span>性别</td>
+				<td colspan="2">
+					
+					<label for="j1" class="radioBox">
+						<span></span><input type="radio" name="j" id="j1">男	
+					</label>
+					
+					<label for="j2" class="radioBox">
+						<span></span><input type="radio" name="j" id="j2">女	
+					</label>
+				</td>
+			</tr>	
+			<tr>
+				<td align="right"><span class="red">*</span>联系电话</td>
+				<td colspan="2">
+					<span class="gray-9 fs12">手机</span>
+					<input type="text" class="inp-bor mr20">
+				
+					<span class="gray-9 fs12">座机</span>
+					<input type="text" class="inp-bor w50" placeholder="区号">
+					<input type="text" class="inp-bor">
+				</td>
+			</tr>
+			<tr>
+				<td align="right"><span class="red">*</span>邮箱地址</td>
+				<td colspan="2">
+					<input type="text" class="inp-bor w300">
+					
+					
+				</td>
+			</tr>
+			<tr>
+				<td align="right"><span class="red">*</span>企业名称</td>
+				<td colspan="2">
+					<input type="text" class="inp-bor w300">
+					
+					
+				</td>
+			</tr>
+			<tr>
+				<td align="right"><span class="red">*</span>职位名称</td>
+				<td colspan="2">
+					<input type="text" class="inp-bor w300">
+					
+					
+				</td>
+			</tr>
+			<tr>
+				<td align="right">办公地址</td>
+				<td colspan="2">
+					<input type="text" class="inp-bor w300">
+					
+					
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td height="40">
+					<label class="checkBox" for="a1"><span></span><input type="checkbox" id="a1" checked="checked"> 我已仔细阅读并接受<a href="" class="blue">猎手服务合同</a></label>
+					
+				</td>
+			</tr>
+	</table>
+	
+	<div class="tc mt20 mb30">
+		
+		<input type="button" value="提交" class="baseBtn  btn-lar w200" />
+	</div>
+	
+	</div>		
+		
+		
+		
+	
+	
+		
+		
+
+</div><!--/content-->
+
+
+
+
+
+
+<div class="footer_top">
+	<div class="area clearfix">
+		<div class="f_logo gray-6">
+			<img src="images/f_logo.png">
+			<p>服务热线：400 800 8866</p>
+			<p>工作时间：09：00-21：00（节假日无休）</p>
+		</div>
+		
+		
+		<div class="f_links">
+			<dl>
+				<dt>关于我们</dt>
+				<dd>
+					<a href="">007猎手网简介</a>
+					<a href="">产品和服务</a>
+					<a href="">“家”入我们</a>
+					<a href="">联系我们</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>操作指南</dt>
+				<dd>
+					<a href="">操作教程</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>合作伙伴</dt>
+				<dd>
+					<a href="">寻求合作</a>
+				</dd>
+			</dl>
+			<dl class="last">
+				<dt>用户协议</dt>
+				<dd>
+					<a href="" class="btn">我要提意见</a>
+					<div class="pr">
+						<input type="text" class="inp-txt"  placeholder="Email"/>
+						<input type="button" value="订阅"  class="d_btn"/>
+					</div>
+					
+				</dd>
+			</dl>
+		</div>
+		
+		<div class="f_ewm">
+			<img src="images/ewm.png">
+			<p>扫描二维码<br />下载我们的App</p>
+		</div>
+		
+	</div><!--/area-->
+</div><!--/footer_top-->
+
+
+<div class="footer">
+	<div class="area clearfix">
+		<p class="fl">京ICP备09083200号 京ICP证070419号 人才服务许可证:RC0710280    </p>
+		<p class="fr">Copyright©2000-2015 liepin.com All Rights Reserved</p>
+	</div>
+	
+</div><!--/footer-->
+<script  type="text/javascript" src="js/city.js"></script>
+<script  type="text/javascript" src="js/layerJobType.js"></script>
+<script  type="text/javascript" src="js/layerIndustry.js"></script>
+
+</body>
+</html>
+

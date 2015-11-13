@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<title></title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta content="width=1200, initial-scale=1, maximum-scale=1, user-scalable=1" name="viewport">
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" href="font/iconfont.css">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script  type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.boxy.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+</head>
+
+<body>
+<div class="header headerStyle">
+	<div class="area clearfix">
+		<h1 class="logo"><img src="images/slogo.png"></h1>
+		<div class="nav">
+			<a href="" title="首页">首页</a><span class="bor">|</span><a href="" title="名企热招">名企热招</a><span class="bor">|</span><a href="" title="名企热招">金牌猎手</a><span class="bor">|</span><a href="" title="关于我们">关于我们</a>
+		</div>
+		
+		<div class="right_box ">
+			<div class="userInfo clearfix">
+				<div class="img"><img src="images/index/hunter.jpg"></div><!--/img-->
+				<div class="txt">
+					<p class="fl"><a href="" class="blue">Mark.s</a> 欢迎你回来 </p>
+					<div class="fr">
+						<a href="" class="msgBtn">站内信 <i>8</i></a>
+						<a href="" class="outBtn">退出</a>
+					</div>
+				</div><!--/txt-->
+				
+			</div>
+		</div>
+		
+		<dl class="ewm">
+			<dt>二维码 <span class="iconfont">&#xe606;</span></dt>
+			<dd>
+				<img src="images/ewm.png" width="80" height="80"/>
+			</dd>
+		</dl>
+		
+	</div>
+</div>
+
+<div class="subNav">
+	<div class="area">
+		<a href="P委托猎手.html" class="active">委托猎手</a><a href="P简历管理.html">简历管理</a><a href="P猎手管理.html">猎手管理</a><a href="P统计报表.html">统计报表</a><a href="P账户管理.html">账户管理</a>
+	</div>
+</div>
+
+
+
+<div class="content area clearfix">
+	
+	
+	
+	<h2 class="fs18 fb">搜索猎手</h2>
+	
+		<div class="s_box  mt20">
+			<div class="top bor_b">
+				<table border="0" cellspacing="0" cellpadding="0" class="tableTdP5 gray-9">
+					
+					<tr>
+						<td align="right" width="40">关键词</td>
+						<td>
+							
+							<div class="pr sus_box sus_box_long">
+								<input type="text" class="inp-bor sus_inp" name="keywords" id="keywords" onfocus="showSusList('#keywordsList')" onkeypress="ajaxSusList('#keywordsList')"/>
+								
+								<ul class="box sus_list" id="keywordsList">
+									<li>关键词</li>
+									<li>关键词</li>
+									<li>关键词</li>
+									<li>关键词</li>
+									<li>关键词</li>
+								</ul>
+								
+							</div>
+							
+						</td>
+						
+						<td>
+							<a href="javascript:;" class="moreGrayBtn" id="showCenBox">更多搜索条件  <span class="iconfont">&#xe609;</span></a>
+						</td>
+						
+					</tr>
+				</table>
+			</div><!--/top-->
+			
+			
+			<div class="cen" id="cen_box">
+				<table border="0" cellspacing="0" cellpadding="0" class="gray-9 tableTdP5">
+					
+					<tr>
+						<td width="115" align="right">猎手昵称</td>
+						<td width="200"><input type="text" class="inp-bor"></td>
+						<td width="150" align="right">所在城市 </td>
+						<td width="200"><input type="text" class="inp-bor inp-right"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td align="right">专注行业</td>
+						<td><input type="text" class="inp-bor inp-right ellipsis" id="industryInp"></td>
+						<td align="right">猎手等级</td>
+						<td>
+							<dl class="dl_select_big dl_select">
+								<dt><span class="txt">--请选择--</span> <span class="iconfont">&#xe60b;</span></dt>
+								<dd>
+									<a href="javascript:;">1级</a>
+									<a href="javascript:;">2级</a>
+									<a href="javascript:;">3级</a>
+									<a href="javascript:;">4级</a>
+									<a href="javascript:;">5级</a>
+									
+								</dd>
+							</dl>
+							<input type="hidden" />
+							
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td align="right">擅长职位</td>
+						<td><input type="text" class="inp-bor"></td>
+						<td align="right">活跃程序</td>
+						<td>
+							<dl class="dl_select_big dl_select">
+								<dt><span class="txt">--请选择--</span> <span class="iconfont">&#xe60b;</span></dt>
+								<dd>
+									<a href="javascript:;">1级</a>
+									<a href="javascript:;">2级</a>
+									<a href="javascript:;">3级</a>
+									<a href="javascript:;">4级</a>
+									<a href="javascript:;">5级</a>
+									
+								</dd>
+							</dl>
+							<input type="hidden" />
+							
+						</td>
+						<td align="right"><a href="javascript:;" class="moreGrayBtn" id="hideCenBox"> 收起  <span class="iconfont">&#xe608;</span></a></td>
+					</tr>
+				</table>
+				
+				
+			</div><!--/cen-->
+			<table border="0" cellspacing="0" cellpadding="0" class="gray-9 tableTdP5">
+				<tr>
+					<td align="right" width="115">按企业名称搜索猎手</td>
+					<td><input type="text" class="inp-bor"></td>
+					<td align="right" width="150">按职位名称搜索猎手</td>
+					<td><input type="text" class="inp-bor"></td>
+					<td></td>
+					
+				</tr>
+			</table>	
+			<div class="tc mt20"><a href="javascript:;" class="baseBtn btn-lar mr10" id="btns_1">搜 索</a> <a href="javascript:;" class="baseBtn baseBtnGray btn-lar">保存搜索条件</a></div>
+		</div><!--/s_box-->
+	
+	
+	
+		<div class="mt50">
+			
+			
+			<table border="0" cellspacing="0" cellpadding="0" class="tableTdP5">
+				<tr>
+					<td><label class="checkBox gray-9" for="a1"><span></span><input type="checkbox" id="a1"> 全选</label></td>
+					<td><a href="javascript:;" class="baseBtn">委托</a></td>
+				</tr>
+			</table>	
+			<table border="0" cellspacing="0" cellpadding="0" width="100%" class="baseTable">
+				<tr>
+					<th>猎手昵称	</th>                
+					<th>专注行业</th>	              
+					<th>擅长职位    </th>       	
+					<th>所在城市	</th>              
+					<th>合作企业名称</th>	               
+					<th>操作职位名称	</th>         
+					<th>信用等级        </th>
+					<th>活跃程度	 </th>     
+					<th>上次登录时间	</th>          
+ 					<th>我要委托	  </th>     
+ 					<th>联系007猎手    </th>            	
+ 					<th>我要暂存</th>
+				</tr>
+				
+				<tr>
+					
+					<td>王小二</td>
+					<td>互联网</td>
+					<td>网页设计师</td>
+					<td>北京</td>
+					<td>北京新东方</td>
+					<td>网页设计师</td>
+					<td>5级</td>
+					<td>55%</td>
+					<td>2015.1.5</td>
+					<td class="blue"><a href="" class="blue">委托</a>/<a href="" class="blue">取消</a></td>
+					<td><a href="" class="blue">发送站内信</a></td>
+					<td class="blue"><a href="" class="blue">暂存</a>/<a href="" class="blue">取消</a></td>
+				</tr>
+				<tr class="bg">
+					<td>王小二</td>
+					<td>互联网</td>
+					<td>网页设计师</td>
+					<td>北京</td>
+					<td>北京新东方</td>
+					<td>网页设计师</td>
+					<td>5级</td>
+					<td>55%</td>
+					<td>2015.1.5</td>
+					<td class="blue"><a href="" class="blue">委托</a>/<a href="" class="blue">取消</a></td>
+					<td><a href="" class="blue">发送站内信</a></td>
+					<td class="blue"><a href="" class="blue">暂存</a>/<a href="" class="blue">取消</a></td>
+				</tr>
+				<tr>
+					
+					<td>王小二</td>
+					<td>互联网</td>
+					<td>网页设计师</td>
+					<td>北京</td>
+					<td>北京新东方</td>
+					<td>网页设计师</td>
+					<td>5级</td>
+					<td>55%</td>
+					<td>2015.1.5</td>
+					<td class="blue"><a href="" class="blue">委托</a>/<a href="" class="blue">取消</a></td>
+					<td><a href="" class="blue">发送站内信</a></td>
+					<td class="blue"><a href="" class="blue">暂存</a>/<a href="" class="blue">取消</a></td>
+				</tr>
+				<tr class="bg">
+					<td>王小二</td>
+					<td>互联网</td>
+					<td>网页设计师</td>
+					<td>北京</td>
+					<td>北京新东方</td>
+					<td>网页设计师</td>
+					<td>5级</td>
+					<td>55%</td>
+					<td>2015.1.5</td>
+					<td class="blue"><a href="" class="blue">委托</a>/<a href="" class="blue">取消</a></td>
+					<td><a href="" class="blue">发送站内信</a></td>
+					<td class="blue"><a href="" class="blue">暂存</a>/<a href="" class="blue">取消</a></td>
+				</tr>
+				<tr>
+					
+					<td>王小二</td>
+					<td>互联网</td>
+					<td>网页设计师</td>
+					<td>北京</td>
+					<td>北京新东方</td>
+					<td>网页设计师</td>
+					<td>5级</td>
+					<td>55%</td>
+					<td>2015.1.5</td>
+					<td class="blue"><a href="" class="blue">委托</a>/<a href="" class="blue">取消</a></td>
+					<td><a href="" class="blue">发送站内信</a></td>
+					<td class="blue"><a href="" class="blue">暂存</a>/<a href="" class="blue">取消</a></td>
+				</tr>
+				<tr class="bg">
+					<td>王小二</td>
+					<td>互联网</td>
+					<td>网页设计师</td>
+					<td>北京</td>
+					<td>北京新东方</td>
+					<td>网页设计师</td>
+					<td>5级</td>
+					<td>55%</td>
+					<td>2015.1.5</td>
+					<td class="blue"><a href="" class="blue">委托</a>/<a href="" class="blue">取消</a></td>
+					<td><a href="" class="blue">发送站内信</a></td>
+					<td class="blue"><a href="" class="blue">暂存</a>/<a href="" class="blue">取消</a></td>
+				</tr>
+				<tr>
+					
+					<td>王小二</td>
+					<td>互联网</td>
+					<td>网页设计师</td>
+					<td>北京</td>
+					<td>北京新东方</td>
+					<td>网页设计师</td>
+					<td>5级</td>
+					<td>55%</td>
+					<td>2015.1.5</td>
+					<td class="blue"><a href="" class="blue">委托</a>/<a href="" class="blue">取消</a></td>
+					<td><a href="" class="blue">发送站内信</a></td>
+					<td class="blue"><a href="" class="blue">暂存</a>/<a href="" class="blue">取消</a></td>
+				</tr>
+				<tr class="bg">
+					<td>王小二</td>
+					<td>互联网</td>
+					<td>网页设计师</td>
+					<td>北京</td>
+					<td>北京新东方</td>
+					<td>网页设计师</td>
+					<td>5级</td>
+					<td>55%</td>
+					<td>2015.1.5</td>
+					<td class="blue"><a href="" class="blue">委托</a>/<a href="" class="blue">取消</a></td>
+					<td><a href="" class="blue">发送站内信</a></td>
+					<td class="blue"><a href="" class="blue">暂存</a>/<a href="" class="blue">取消</a></td>
+				</tr>
+			</table>
+			<table border="0" cellspacing="0" cellpadding="0" class="tableTdP5" width="100%">
+				<tr>
+					<td width="170"><label class="checkBox gray-9" for="a1"><span></span><input type="checkbox" id="a1"> 全选</label><a href="javascript:;" class="baseBtn">委托</a></td>
+					<td>
+						<div class="page">
+							<a href="">首页</a>
+							<a href="">上一页</a>
+							<a href="" class="active">1</a>
+							<a href="">2</a>
+							<a href="">3</a>
+							<a href="">4</a>
+							<a href="">5</a>
+							<a href="">6</a>
+							<a href="">7</a>
+							<a href="">8</a>
+							<a href="">下一页</a>
+							<a href="">末页</a>
+							          
+						</div>
+						
+					</td>
+					<td width="170"></td>
+				</tr>
+			</table>
+			
+				
+		</div><!--/mt50-->
+		
+	
+	
+		
+		
+		
+	
+	
+		
+		
+
+</div><!--/content-->
+
+
+
+
+
+
+
+
+<div class="footer footerStyle">
+	<div class="area clearfix">
+		<p class="fl">京ICP备09083200号 京ICP证070419号 人才服务许可证:RC0710280    </p>
+		<p class="fr">Copyright©2000-2015 liepin.com All Rights Reserved</p>
+	</div>
+	
+</div><!--/footer-->
+<script  type="text/javascript" src="js/city.js"></script>
+<script  type="text/javascript" src="js/layerJobType.js"></script>
+<script  type="text/javascript" src="js/layerIndustry.js"></script>
+
+
+</body>
+</html>
+

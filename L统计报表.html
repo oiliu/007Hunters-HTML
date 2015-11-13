@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<title></title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta content="width=1200, initial-scale=1, maximum-scale=1, user-scalable=1" name="viewport">
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" href="font/iconfont.css">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script  type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.boxy.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+</head>
+
+<body>
+<div class="header headerStyle">
+	<div class="area clearfix">
+		<h1 class="logo"><img src="images/slogo.png"></h1>
+		<div class="nav">
+			<a href="" title="首页">首页</a><span class="bor">|</span><a href="" title="名企热招">名企热招</a><span class="bor">|</span><a href="" title="名企热招">金牌猎手</a><span class="bor">|</span><a href="" title="关于我们">关于我们</a>
+		</div>
+		
+		<div class="right_box ">
+			<div class="userInfo clearfix">
+				<div class="img"><img src="images/index/hunter.jpg"></div><!--/img-->
+				<div class="txt">
+					<p class="fl"><a href="" class="blue">Mark.s</a> 欢迎你回来 </p>
+					<div class="fr">
+						<a href="" class="msgBtn">站内信 <i>8</i></a>
+						<a href="" class="outBtn">退出</a>
+					</div>
+				</div><!--/txt-->
+				
+			</div>
+		</div>
+		
+		<dl class="ewm">
+			<dt>二维码 <span class="iconfont">&#xe606;</span></dt>
+			<dd>
+				<img src="images/ewm.png" width="80" height="80"/>
+			</dd>
+		</dl>
+		
+	</div>
+</div>
+
+<div class="subNav">
+	<div class="area">
+		<a href="L建立人才库.html">建立人才库</a><a href="L我要做单.html">我要做单</a><a href="L工作台_项目管理.html">项目管理</a><a href="L简历管理.html">简历管理</a><a href="L客户管理.html">客户管理</a><a href="L统计报表.html" class="active">统计报表</a><a href="L账户管理.html">账户管理</a>
+	</div>
+</div>
+
+
+
+<div class="content area clearfix">
+	
+	<h2 class="fs20 fb mb30">统计报表</h2>
+
+	<div class="bor_b mb30 gray-9">
+		<table border="0" cellspacing="0" cellpadding="0" class="tableTdP5 mb10">
+			<tr>
+				<td>统计时间</td>
+				<td><input type="text" class="inp-bor inp-right" id="d4311" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'d4312\')}'})"></td>
+				<td>至</td>
+				<td><input type="text" class="inp-bor inp-right" id="d4312" onclick="WdatePicker({minDate:'#F{$dp.$D(\'d4311\')}'})"></td>
+				<td><input type="submit" value="确 定" class="baseBtn btn-lar"/></td>
+			</tr>
+		</table>
+	</div>
+	
+	
+	
+		<p class="mb5">账户统计</p>
+		<table border="0" cellspacing="0" cellpadding="0" class="baseTable" width="100%">
+			<tr>
+				<th>时间</th>
+				<th>企业ID</th>
+				<th>企业名称</th>
+				<th>职位ID</th>
+				<th>职位名称</th>
+				<th>服务费用比例</th>
+				<th>服务费用金额</th>  
+				           
+			</tr>
+				              		        		                    	        		          
+			<tr>
+				<td>2014.10.12</td>
+				<td>1234</td>
+				<td>中国国际图书进出口总公司</td>
+				<td>1234</td>
+				<td>UI设计师</td>
+				<td>20%</td>
+				<td>522</td>
+			</tr>
+			
+		</table>
+
+		<p class="mb5 mt30">综合数据统计</p>
+		<table border="0" cellspacing="0" cellpadding="0" class="baseTable" width="100%">
+			<tr>
+				<th>时间	          </th>
+				<th>客户邀约量          		</th>
+				<th>推荐报告量		          </th>
+				<th>客户面试量	          </th>
+				<th>背景调查量          	 </th>
+				<th>接受offer准备入职           	</th>
+				<th> 接受offer拒绝入职  	         </th>
+				<th> 拒绝offer	          </th>
+				<th>成功入职	          </th>
+				<th>成功转正</th>
+				                  
+			</tr>
+				              		        		                    	        		          
+			<tr>
+				<td>2014.10.12</td>
+				<td>56</td>
+				<td>56</td>
+				<td>26</td>
+				<td>56</td>
+				<td>56</td>
+				<td>26</td>
+				<td>56</td>
+				<td>56</td>
+				<td>26</td>
+			</tr>
+			
+		</table>
+		
+		
+		
+		<p class="mb5 mt30">人才库统计：（66）</p>
+		<table border="0" cellspacing="0" cellpadding="0" class="baseTable" width="680">
+			<tr>
+				<th>时间	          </th>
+				<th>新增人才		          </th>
+				<th>更新人才		        </th>
+				<th>流失人才</th>	                          
+			</tr>
+				              		        		                    	        		          
+			<tr>
+				<td>2014.10.12</td>
+				<td>56</td>
+				<td>56</td>
+				<td>26</td>
+				
+			</tr>
+			
+		</table>
+		
+		
+		
+		<p class="mb5 mt30">项目操作统计：（88）</p>
+		<table border="0" cellspacing="0" cellpadding="0" class="baseTable" width="680">
+			<tr>
+				<th>时间	          </th>
+				<th>进行中的项目			          </th>
+				<th>已终止的项目			          </th>
+				<th>已完成的项目</th>	 
+			</tr>  	        				        	        
+				              		        		                    	        		          
+			<tr>
+				<td>2014.10.12</td>
+				<td>56</td>
+				<td>56</td>
+				<td>26</td>
+			</tr>
+			
+		</table>
+		
+		
+
+</div><!--/content-->
+
+
+
+
+
+
+
+
+<div class="footer footerStyle">
+	<div class="area clearfix">
+		<p class="fl">京ICP备09083200号 京ICP证070419号 人才服务许可证:RC0710280    </p>
+		<p class="fr">Copyright©2000-2015 liepin.com All Rights Reserved</p>
+	</div>
+	
+</div><!--/footer-->
+
+
+</body>
+</html>
+

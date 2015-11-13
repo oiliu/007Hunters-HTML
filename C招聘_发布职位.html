@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<title></title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta content="width=1200, initial-scale=1, maximum-scale=1, user-scalable=1" name="viewport">
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" href="font/iconfont.css">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script  type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.boxy.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+</head>
+
+<body>
+<div class="header headerStyle">
+	<div class="area clearfix">
+		<h1 class="logo"><img src="images/slogo.png"></h1>
+		<div class="nav">
+			<a href="" title="首页">首页</a><span class="bor">|</span><a href="" title="名企热招">名企热招</a><span class="bor">|</span><a href="" title="名企热招">金牌猎手</a><span class="bor">|</span><a href="" title="关于我们">关于我们</a>
+		</div>
+		
+		<div class="right_box ">
+			<div class="userInfo clearfix">
+				<div class="img"><img src="images/index/hunter.jpg"></div><!--/img-->
+				<div class="txt">
+					<p class="fl"><a href="" class="blue">Mark.s</a> 欢迎你回来 </p>
+					<div class="fr">
+						<a href="" class="msgBtn">站内信 <i>8</i></a>
+						<a href="" class="outBtn">退出</a>
+					</div>
+				</div><!--/txt-->
+				
+			</div>
+		</div>
+		
+		<dl class="ewm">
+			<dt>二维码 <span class="iconfont">&#xe606;</span></dt>
+			<dd>
+				<img src="images/ewm.png" width="80" height="80"/>
+			</dd>
+		</dl>
+		
+	</div>
+</div>
+
+<div class="subNav">
+	<div class="area">
+		<a href="C招聘_发布职位.html" class="active">发布职位</a><a href="C职位管理.html">职位管理</a><a href="C简历管理.html">简历管理</a><a href="C猎手管理.html">猎手管理</a><a href="C统计报表.html">统计报表</a><a href="C账户管理.html">账户管理</a>
+	</div>
+</div>
+
+
+
+<div class="content area clearfix">
+	
+	<div class="bor_b mb30">
+		<h2 class="fs18 fb mb10">职位信息</h2>
+	</div>
+	
+
+	<div class="mb30 gray-9">
+		<table border="0" cellspacing="0" cellpadding="0" class="tableTdP2 mb10">
+			<tr>
+				<td width="60"><span class="red">*</span>职位名称</td>
+				<td width="200"><input type="text" class="inp-bor"></td>
+				<td><label class="checkBox" for="a1"><span></span><input type="checkbox" id="a1" checked="checked"> 新设职位</label> </td>
+			</tr>
+			<tr>
+				<td><span class="red">*</span>职位类别</td>
+				<td colspan="2"><input type="text" class="inp-bor inp-right ellipsis" id="jobType"></td>
+			</tr>
+			<tr>
+				<td><span class="red">*</span>职位级别</td>
+				<td colspan="2"><input type="text" class="inp-bor"></td>
+			</tr>
+			<tr>
+				<td><span class="red">*</span>招聘数量</td>
+				<td colspan="2"><input type="text" class="inp-bor" onkeyup="keyNum(this)"></td>
+			</tr>
+			<tr>
+				<td><span class="red">*</span>所在城市</td>
+				<td colspan="2"><input type="text" class="inp-bor inp-right ellipsis" id="cityInp"></td>
+			</tr>
+			<tr>
+				<td><span class="red">*</span>所属部门</td>
+				<td colspan="2"><input type="text" class="inp-bor"></td>
+			</tr>
+			
+			<tr>
+				<td><span class="red">*</span>汇报对像</td>
+				<td colspan="2"><input type="text" class="inp-bor"></td>
+			</tr>
+			<tr>
+				<td><span class="red">*</span>下属人数</td>
+				<td colspan="2"><input type="text" class="inp-bor w80" onkeyup="keyNum(this)"> 人，下属结构 <input type="text" class="inp-bor w80"></td>
+			</tr>
+			<tr>
+				<td><span class="red">*</span>有限期限</td>
+				<td colspan="2"><input type="text" class="inp-bor inp-right" id="d4311" onclick="WdatePicker({minDate:'%y-%M-%d',maxDate:'#F{$dp.$D(\'d4312\')}'})">
+				&nbsp;&nbsp;至&nbsp;&nbsp;
+				<input type="text" class="inp-bor inp-right" id="d4312" onclick="WdatePicker({minDate:'#F{$dp.$D(\'d4311\')}'})">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3" height="50"></td>
+			</tr>
+			<tr>
+				<td><span class="red">*</span>是否笔试</td>
+				<td colspan="2">
+					
+					<label for="b1" class="radioBox">
+						<span></span><input type="radio" name="b" id="b1" checked="checked">是	
+					</label>
+					
+					<label for="b2" class="radioBox">
+						<span></span><input type="radio" name="b" id="b2">否	
+					</label>
+				</td>
+				
+			</tr>
+			<tr>
+				<td><span class="red">*</span>薪酬福利</td>
+				<td colspan="2">
+					
+					税前薪资
+					&nbsp;<input type="text" class="inp-bor w80" onkeyup="keyNum(this)">
+					&nbsp;万元&nbsp;&nbsp;至&nbsp;&nbsp;<input type="text" class="inp-bor w80" onkeyup="keyNum(this)">
+					
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<label for="c1" class="radioBox">
+						<span></span><input type="radio" name="b" id="c1" checked="checked">年薪	
+					</label>
+					&nbsp;&nbsp;
+					<label for="c2" class="radioBox">
+						<span></span><input type="radio" name="b" id="c2">月薪	
+					</label>
+					
+				</td>
+				
+			</tr>
+			<tr>
+				<td></td>
+				<td colspan="2">
+					薪资结构&nbsp;&nbsp;&nbsp;
+					<label class="checkBox" for="d1"><span></span><input type="checkbox" name="d" id="d1" checked="checked"> 基本工资</label>
+					<label class="checkBox" for="d2"><span></span><input type="checkbox" name="d" id="d2"> 岗位工资</label>
+					<label class="checkBox" for="d3"><span></span><input type="checkbox" name="d" id="d3"> 绩效工资</label>
+					<label class="checkBox" for="d4"><span></span><input type="checkbox" name="d" id="d4"> 工龄工资</label>
+					<label class="checkBox" for="d5"><span></span><input type="checkbox" name="d" id="d5"> 职称工资</label>
+					<label class="checkBox" for="d6"><span></span><input type="checkbox" name="d" id="d6"> 其他</label><input type="text" class="inp-bor w80">
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td colspan="2">
+					补助结构&nbsp;&nbsp;&nbsp;
+					<label class="checkBox" for="e1"><span></span><input type="checkbox" name="e" id="e1" checked="checked"> 交通补助</label>
+					<label class="checkBox" for="e2"><span></span><input type="checkbox" name="e" id="e2"> 通讯补助</label>
+					<label class="checkBox" for="e3"><span></span><input type="checkbox" name="e" id="e3"> 饭费补助</label>
+					<label class="checkBox" for="e4"><span></span><input type="checkbox" name="e" id="e4"> 出差补助  </label>
+					<label class="checkBox" for="e5"><span></span><input type="checkbox" name="e" id="e5"> 住房补助</label>
+					<label class="checkBox" for="e6"><span></span><input type="checkbox" name="e" id="e6"> 其他</label><input type="text" class="inp-bor w80">
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td colspan="2">
+					福利构成&nbsp;&nbsp;&nbsp;社会保险&nbsp;&nbsp;&nbsp;
+					<label class="checkBox" for="f1"><span></span><input type="checkbox" name="f" id="f1" checked="checked"> 国家标准</label>
+					<label class="checkBox" for="f2"><span></span><input type="checkbox" name="f" id="f2"> 商业保险</label>
+					<label class="checkBox" for="f3"><span></span><input type="checkbox" name="f" id="f3"> 其他</label>
+					<input type="text" class="inp-bor w80">
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td colspan="2">
+					<div class="pl60">公 积 金&nbsp;&nbsp;&nbsp;&nbsp;
+					<label class="checkBox" for="g1"><span></span><input type="checkbox" name="g" id="g1" checked="checked"> 有</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<label class="checkBox" for="g2"><span></span><input type="checkbox" name="g" id="g2"> 没有</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<label class="checkBox" for="g3"><span></span><input type="checkbox" name="g" id="g3"> 其他</label>
+					<input type="text" class="inp-bor w80"></div>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td colspan="2">
+					发放月份&nbsp;&nbsp;<input type="text" class="inp-bor w80" onkeyup="keyNum(this)">&nbsp;月&nbsp;至 &nbsp;<input type="text" class="inp-bor w80" onkeyup="keyNum(this)">&nbsp;月
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td colspan="2">
+					其他构成&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<label class="checkBox" for="h1"><span></span><input type="checkbox" name="h" id="h1" checked="checked"> 奖金/提成</label>
+					<label class="checkBox" for="h2"><span></span><input type="checkbox" name="h" id="h2"> 期权</label>
+					<label class="checkBox" for="h3"><span></span><input type="checkbox" name="h" id="h3"> 过节费</label>
+					<label class="checkBox" for="h4"><span></span><input type="checkbox" name="h" id="h4"> 生日费</label>
+					<label class="checkBox" for="h5"><span></span><input type="checkbox" name="h" id="h5"> 其他</label>
+					<input type="text" class="inp-bor w80">
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td colspan="2">
+					假期福利&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<label class="checkBox" for="i1"><span></span><input type="checkbox" name="i" id="i1" checked="checked">国家标准</label>
+					<label class="checkBox" for="i2"><span></span><input type="checkbox" name="i" id="i2">公司标准</label>
+					
+					<label class="checkBox mr10" for="i3"><span></span><input type="checkbox" name="i" id="i3"> 其他 </label><input type="text" class="inp-bor w80">
+					
+				</td>
+			</tr>
+		</table>
+		
+		
+		
+		
+	</div>
+	
+	
+	<div class="bor_b mb30 mt50">
+		<h2 class="fs18 fb mb10">职位要求</h2>
+	</div>
+	<div class="gray-9 mb30">
+		
+	
+	<table border="0" cellspacing="0" cellpadding="0" class="tableTdP2 mb10">
+			<tr>
+				<td width="80" align="right"><span class="red">*</span>所属行业</td>
+				<td width="200"><input type="text" class="inp-bor inp-right ellipsis" id="industryInp"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td align="right"><span class="red">*</span>学历证书</td>
+				<td>
+					<dl class="dl_select_big dl_select dl_select_w">
+						<dt><span class="txt">不限</span> <span class="iconfont">&#xe60b;</span></dt>
+						<dd>
+							<a href="javascript:;">不限</a>
+							<a href="javascript:;">博士后</a>
+							<a href="javascript:;">博士</a>
+							<a href="javascript:;">MBA/EMBA</a>
+							<a href="javascript:;">硕士</a>
+							<a href="javascript:;">本科</a>
+							<a href="javascript:;">大专</a>
+							<a href="javascript:;">高中</a>
+							<a href="javascript:;">初中</a>
+							<a href="javascript:;">中专</a>
+							<a href="javascript:;">中技</a>
+						</dd>
+					</dl>
+					<input type="hidden" />
+				</td>
+				<td>
+					
+					是否统招全日制？
+					
+					<label for="j1" class="radioBox">
+						<span></span><input type="radio" name="j" id="j1" checked="checked">是	
+					</label>
+					
+					<label for="j2" class="radioBox">
+						<span></span><input type="radio" name="j" id="j2">否	
+					</label>
+				</td>
+			</tr>	
+			<tr>
+				<td align="right">毕业院校</td>
+				<td colspan="2">
+					<input type="text" class="inp-bor w120">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					专业要求
+					<input type="text" class="inp-bor w120">
+					
+				</td>
+			</tr>
+			<tr>
+				<td align="right">行业资质证书</td>
+				<td colspan="2">
+					<input type="text" class="inp-bor w120">
+					
+					
+				</td>
+			</tr>
+			<tr>
+				<td align="right"><span class="red">*</span>年龄</td>
+				<td colspan="2">
+					<input type="text" class="inp-bor w120" onkeyup="keyNum(this)">
+					&nbsp;&nbsp;
+					至
+					&nbsp;&nbsp;&nbsp;
+					<input type="text" class="inp-bor w120" onkeyup="keyNum(this)">
+					
+				</td>
+			</tr>
+			<tr>
+				<td align="right"><span class="red">*</span>工作年限</td>
+				<td colspan="2">
+					<input type="text" class="inp-bor w120" onkeyup="keyNum(this)">
+					&nbsp;&nbsp;
+					至
+					&nbsp;&nbsp;&nbsp;
+					<input type="text" class="inp-bor w120" onkeyup="keyNum(this)">
+					
+				</td>
+			</tr>
+			<tr>
+				<td align="right" height="40"><span class="red">*</span>性别</td>
+				<td colspan="2">
+					
+					<label for="k0" class="radioBox">
+						<span></span><input type="radio" name="k" id="k0" checked="checked">不限	
+					</label>
+					
+					<label for="k1" class="radioBox">
+						<span></span><input type="radio" name="k" id="k1">男	
+					</label>
+					
+					<label for="k2" class="radioBox">
+						<span></span><input type="radio" name="k" id="k2">女	
+					</label>
+					
+				</td>
+			</tr>
+			<tr>
+				<td align="right" height="40"><span class="red">*</span>语言</td>
+				<td colspan="2">
+					
+					<label for="l0" class="radioBox">
+						<span></span><input type="radio" name="l" id="l0" checked="checked">英语
+					</label>
+					
+					<label for="l1" class="radioBox">
+						<span></span><input type="radio" name="l" id="l1">日语	
+					</label>
+					
+					<label for="l2" class="radioBox">
+						<span></span><input type="radio" name="l" id="l2">韩语
+					</label>
+					
+					<label for="l3" class="radioBox">
+						<span></span><input type="radio" name="l" id="l3">法语
+					</label>
+					
+					
+					<label for="l4" class="radioBox">
+						<span></span><input type="radio" name="l" id="l4">德语
+					</label>
+					
+					
+					<label for="l5" class="radioBox">
+						<span></span><input type="radio" name="l" id="l5">粤语
+					</label>
+					
+					<label for="l6" class="radioBox">
+						<span></span><input type="radio" name="l" id="l6">普通话
+					</label>
+					
+					<label for="l7" class="radioBox">
+						<span></span><input type="radio" name="l" id="l7">其他
+					</label>
+					<input type="text" class="inp-bor w80">
+						  	                	                          	                  
+				</td>
+			</tr>
+			<tr>
+				<td align="right" valign="top"><span class="red">*</span>职位描述<br />任职资格</td>
+				<td colspan="2" height="150" valign="top">
+					<textarea name="" rows="" cols="" class="inp-bor textarea500"></textarea>
+					
+				</td>
+			</tr>
+			<tr>
+				<td align="right" valign="top">补充说明</td>
+				<td colspan="2">
+					<textarea name="" rows="" cols="" class="inp-bor textarea500"></textarea>
+					
+				</td>
+			</tr>
+			<tr>
+				<td align="right"><span class="red">*</span>职位亮点	</td>
+				<td colspan="2">
+					<span id="tags">
+						<input type="text" class="inp-bor w70 mr5" name="tags_1"><input type="text" class="inp-bor w70 mr5" name="tags_2"><input type="text" class="inp-bor w70 mr5" name="tags_3"><input type="text" class="inp-bor w70 mr5" name="tags_4"><input type="text" class="inp-bor w70 mr5" name="tags_5">
+					</span>
+					
+					<span class="iconfont jiaIconfont" onclick="addTags(this,'tags')" data-num='3'>&#xe60a;</span>
+				</td>
+			</tr>	
+			<tr>
+				<td colspan="3" class="gray-6" height="50">友情提示：关键词功能非常重要！请尽量填写精确完整，以便作为007猎手和网站自动匹配推荐简历的依据。关键词内容包括：职位描述重点，任职资格重点，人选性格风格特点，资质证书等。						</td>
+			</tr>
+			<tr>
+				<td align="right"><span class="red">*</span>指定007猎手</td>
+				<td colspan="2">
+					
+					<label for="m0" class="radioBox">
+						<span></span><input type="radio" name="m" id="m0" checked="checked">是
+					</label>
+					
+					<label for="m1" class="radioBox">
+						<span></span><input type="radio" name="m" id="m1">否	
+					</label>
+				</td>
+			</tr>
+			
+	</table>
+	
+	<div class="tc mt20 mb30">
+		<input type="button" value="预览" class="baseBtn baseBtnGray btn-lar w120" />&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="button" value="发布" class="baseBtn  btn-lar w120" />
+	</div>
+	
+	</div>		
+		
+		
+		
+	
+	
+		
+		
+
+</div><!--/content-->
+
+
+
+
+
+
+
+
+<div class="footer footerStyle">
+	<div class="area clearfix">
+		<p class="fl">京ICP备09083200号 京ICP证070419号 人才服务许可证:RC0710280    </p>
+		<p class="fr">Copyright©2000-2015 liepin.com All Rights Reserved</p>
+	</div>
+	
+</div><!--/footer-->
+
+<script  type="text/javascript" src="js/city.js"></script>
+<script  type="text/javascript" src="js/layerJobType.js"></script>
+<script  type="text/javascript" src="js/layerIndustry.js"></script>
+</body>
+</html>
+
